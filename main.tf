@@ -1,12 +1,13 @@
-resource "aws_instance" "baseec2" {
-    ami=var.ami
-    instance_type=var.instance_type
-    key_name=var.key_name
-    user_data=<<-EOF
-              #!/bin/bash
-              sudo yum update -y
-              EOF
-    tags={
-        Name="BaseEC2"
-    }
+module "module-example" {
+    source = ".\\modulec2\\"
+    region                     = "${var.region}"
+    myprofile                  = "${var.myprofile}"
+    ami_id                     = "${var.ami_id}"
+    instance_type              = "${var.instance_type}"
+    tag                        = "${var.tag}"
+
+}
+
+output "instance_public_ip_address"{
+  value="${module.module-example.instance_ip}"
 }
