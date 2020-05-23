@@ -38,7 +38,7 @@ phases:
       - export TF_VAR_ami_id=$ami_id
       - export TF_VAR_instance_type=$instance_type
       - export TF_VAR_tag=$tag
-      - terraform $cmd -var region=$region --auto-approve
+      - terraform $cmd --auto-approve
       - echo "Post $cmd build"
   post_build:
     commands:
