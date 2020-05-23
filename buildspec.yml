@@ -34,7 +34,11 @@ phases:
   build:
     commands:
       #- . /tmp/aws_cred_export.txt &&  python runterraform.js.py $region $applicationname $destroy
-      - terraform $cmd --auto-approve
+      - export TF_VAR_region=$region
+      - export TF_VAR_ami_id=$ami_id
+      - export TF_VAR_instance_type=$instance_type
+      - export TF_VAR_tag=$tag
+      - terraform $cmd -var region=$region --auto-approve
       - echo "Post $cmd build"
   post_build:
     commands:
