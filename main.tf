@@ -1,4 +1,4 @@
-module "module-example" {
+module "module-ec2" {
     source = "./moduleec2/"
     region                     = "${var.region}"
     #myprofile                  = "${var.myprofile}"
@@ -9,5 +9,5 @@ module "module-example" {
 }
 
 output "instance_public_ip_address"{
-  value="${module.module-example.instance_ip}"
+  value="${module.module-ec2.instance_ip}"
 }
