@@ -8,7 +8,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - sudo pip install boto3
+    #  - sudo pip install boto3
       - sudo yum update -y
       - sudo yum install terraform
     #  - sudo mv terraform /bin
