@@ -1,4 +1,4 @@
-variable "ami" {
+variable "ami_id" {
   default = "ami-0470e33cd681b2476"
 }
 
@@ -17,4 +17,7 @@ variable "myprofile" {
 
 variable "key_name" {
   default = "ucasterraform"
+}
+variable "tag" {
+  
 }
