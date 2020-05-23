@@ -1,5 +1,5 @@
 module "module-example" {
-    source = ".\\modulec2\\"
+    source = ".\\moduleec2\\"
     region                     = "${var.region}"
     myprofile                  = "${var.myprofile}"
     ami_id                     = "${var.ami_id}"
