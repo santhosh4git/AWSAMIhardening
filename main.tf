@@ -1,7 +1,5 @@
 module "module-example" {
     source = "./moduleec2/"
-    region                     = "${var.region}"
-    myprofile                  = "${var.myprofile}"
     ami_id                     = "${var.ami_id}"
     instance_type              = "${var.instance_type}"
     tag                        = "${var.tag}"
